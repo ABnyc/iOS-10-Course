@@ -34,12 +34,23 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mountains" translatesAutoresizingMaskIntoConstraints="NO" id="Xfq-tK-ULI">
                                 <rect key="frame" x="0.0" y="502" width="375" height="165"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="nYJ-G3-6OM"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fow-I3-TK9" appends="YES" id="MgL-pg-O3g"/>
+                                </connections>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bt-86-8Nq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="667"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UPm-me-ClF"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fow-I3-TK9" appends="YES" id="73f-1f-4Vt"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,14 +60,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xfq-tK-ULI" secondAttribute="bottom" id="6sN-B8-fGF"/>
                             <constraint firstAttribute="trailing" secondItem="UYo-DX-sg1" secondAttribute="trailing" id="Aoz-gt-9x2"/>
                             <constraint firstItem="Xfq-tK-ULI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Es0-ZV-Jho"/>
-                            <constraint firstItem="2bt-86-8Nq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FKM-2w-y4x"/>
                             <constraint firstItem="uZg-jw-kbi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="FnR-4X-IWe"/>
+                            <constraint firstItem="2bt-86-8Nq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RkS-2J-xqt"/>
                             <constraint firstItem="2bt-86-8Nq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="StV-Md-qYz"/>
                             <constraint firstItem="UYo-DX-sg1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U3v-bi-U9y"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2bt-86-8Nq" secondAttribute="bottom" id="f6s-Nc-VQo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UYo-DX-sg1" secondAttribute="bottom" id="n5r-WT-5UE"/>
                             <constraint firstAttribute="trailing" secondItem="Xfq-tK-ULI" secondAttribute="trailing" id="tXM-4T-T0L"/>
-                            <constraint firstAttribute="trailing" secondItem="2bt-86-8Nq" secondAttribute="trailing" id="xME-wd-DDY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -64,6 +74,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="fow-I3-TK9"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
