@@ -26,7 +26,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.delegate = self
         tableView.dataSource = self
         
-        //generateTestData()
+       // generateTestData()
         attempFetch()
         
         
@@ -72,13 +72,21 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let priceSort = NSSortDescriptor(key: "price", ascending: true)
         let titleSort = NSSortDescriptor(key: "title", ascending: true)
         
+        
+        
+        //let fetchRequest2: NSFetchRequest<ItemType> = ItemType.fetchRequest()
+       let typeSort = NSSortDescriptor(key: "toItemType.type", ascending: true)
+        
         if segment.selectedSegmentIndex == 0 {
             fetchRequest.sortDescriptors = [dateSort]
         } else if segment.selectedSegmentIndex == 1 {
             fetchRequest.sortDescriptors = [priceSort]
         } else if segment.selectedSegmentIndex == 2 {
             fetchRequest.sortDescriptors = [titleSort]
+        } else if segment.selectedSegmentIndex == 3 {
+           fetchRequest.sortDescriptors = [typeSort]
         }
+
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         controller.delegate = self

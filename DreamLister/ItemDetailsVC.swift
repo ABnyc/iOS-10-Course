@@ -15,6 +15,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet weak var titleField: CustomTextField!
     @IBOutlet weak var priceField: CustomTextField!
     @IBOutlet weak var detailsField: CustomTextField!
+    @IBOutlet weak var itemTypeField: CustomTextField!
+    
     
     var stores = [Store]()
     var itemToEdit: Item?
@@ -52,7 +54,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
 //        store5.name = "Apple"
 //        
 //        ad.saveContext()
-        
+//        
         getStores()
         if itemToEdit != nil {
             loadItemData()
@@ -101,6 +103,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     @IBAction func saveBtnPressed(_ sender: Any) {
         let item: Item!
+        let itemType = ItemType(context: context)
+        
         let picture = Image(context: context)
         
         
@@ -116,6 +120,10 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         item.toImage = picture
         
+        itemType.type = itemTypeField.text
+        item.toItemType = itemType
+        
+        
         if let title = titleField.text {
             item.title = title
         }
@@ -125,6 +133,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         if let details = detailsField.text {
             item.details = details
         }
+        
         
         item.toStore = stores[storePicker.selectedRow(inComponent: 0)]
         
@@ -142,6 +151,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             titleField.text = item.title
             priceField.text =  "\(item.price)"
             detailsField.text = item.details
+            itemTypeField.text = item.toItemType?.type
+            
             
             
             thumbImage.image = item.toImage?.image as? UIImage

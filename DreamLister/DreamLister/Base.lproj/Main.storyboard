@@ -31,6 +31,7 @@
                                     <segment title="Newest"/>
                                     <segment title="Price"/>
                                     <segment title="Title"/>
+                                    <segment title="Type"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -241,9 +242,22 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTV-hR-GeB" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
+                                <rect key="frame" x="16" y="250" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="QbG-N9-B0m"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vk7-Bb-Jlb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KTV-hR-GeB" firstAttribute="leading" secondItem="x7o-uV-vwu" secondAttribute="leadingMargin" id="3RW-uB-THV"/>
+                            <constraint firstItem="KTV-hR-GeB" firstAttribute="trailing" secondItem="x7o-uV-vwu" secondAttribute="trailingMargin" id="8CX-F3-ke5"/>
                             <constraint firstItem="Oo1-es-EIS" firstAttribute="top" secondItem="exN-iy-QM5" secondAttribute="bottom" constant="8" id="8HR-3p-1Iz"/>
                             <constraint firstItem="vfw-6W-flJ" firstAttribute="trailing" secondItem="x7o-uV-vwu" secondAttribute="trailingMargin" id="AGq-lW-b8O"/>
                             <constraint firstItem="g3O-rB-MYe" firstAttribute="top" secondItem="LX8-WR-aVX" secondAttribute="bottom" constant="18" id="AnW-OV-cfj"/>
@@ -263,6 +277,7 @@
                             <constraint firstItem="vfw-6W-flJ" firstAttribute="top" secondItem="g3O-rB-MYe" secondAttribute="bottom" constant="10" id="iYI-5M-1Vv"/>
                             <constraint firstItem="mGs-eh-QNu" firstAttribute="leading" secondItem="x7o-uV-vwu" secondAttribute="leadingMargin" id="oV0-Ii-FTU"/>
                             <constraint firstItem="VlQ-Qh-ntY" firstAttribute="top" secondItem="LX8-WR-aVX" secondAttribute="bottom" constant="8" id="pPA-lt-Qxi"/>
+                            <constraint firstItem="KTV-hR-GeB" firstAttribute="top" secondItem="qTU-M3-BRL" secondAttribute="bottom" constant="8" id="pku-VS-mjs"/>
                             <constraint firstItem="rVV-Ve-fu9" firstAttribute="centerX" secondItem="VlQ-Qh-ntY" secondAttribute="centerX" id="shk-c6-EhZ"/>
                             <constraint firstItem="LIe-LY-WUr" firstAttribute="top" secondItem="mGs-eh-QNu" secondAttribute="bottom" constant="20" id="tZg-Zr-X6Y"/>
                         </constraints>
@@ -277,6 +292,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="qTU-M3-BRL" id="DM9-4v-Nl3"/>
+                        <outlet property="itemTypeField" destination="KTV-hR-GeB" id="Of5-AB-46h"/>
                         <outlet property="priceField" destination="vfw-6W-flJ" id="k4y-lz-ZOr"/>
                         <outlet property="storePicker" destination="Oo1-es-EIS" id="V4a-eB-Vxt"/>
                         <outlet property="thumbImage" destination="VlQ-Qh-ntY" id="iDl-X3-Hjd"/>
