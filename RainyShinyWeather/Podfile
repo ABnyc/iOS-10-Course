@@ -6,6 +6,8 @@ target 'RainyShinyWeather' do
   use_frameworks!
 
   # Pods for RainyShinyWeather
+  pod 'Alamofire',
+  :git => 'https://github.com/Alamofire/Alamofire.git'
 
   target 'RainyShinyWeatherTests' do
     inherit! :search_paths
