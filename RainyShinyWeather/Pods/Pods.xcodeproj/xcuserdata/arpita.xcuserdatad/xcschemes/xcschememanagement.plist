@@ -19,30 +19,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-RainyShinyWeatherUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>02F8F2EB78577B34EFDCAFA3118E1447</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>49D69C68DB0546B9189A550EDD54AE6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6AAA33094CFF8E60F9675378405BD809</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E998C32E230357CB071677FF3814F08F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

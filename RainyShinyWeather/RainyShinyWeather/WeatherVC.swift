@@ -18,6 +18,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var currentWeatherTypeLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var currentWeather = CurrentWeather()
     
     
     
@@ -29,6 +30,12 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         print(CURRENT_WEATHER_URL)
+        currentWeather = CurrentWeather()
+        currentWeather.downloadWeatherDetails {
+            //setup UI to load downloaded data 
+            self.updateMainUI()
+        }
+        
         
     }
     
@@ -45,6 +52,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath)
         return cell
     }
+    
+    func updateMainUI() {
+        dateLbl.text = currentWeather.date
+        currentTempLbl.text = "\(currentWeather.currentTemp)"
+        currentWeatherTypeLbl.text = currentWeather.weatherType
+        locationLbl.text = currentWeather.cityName
+        currentWeatherImg.image = UIImage(named: currentWeather.weatherType)
+    }
+    
 
     
 
