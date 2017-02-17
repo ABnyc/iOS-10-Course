@@ -13,6 +13,7 @@
 		2B57F6231E56831300CFD316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B57F6221E56831300CFD316 /* Assets.xcassets */; };
 		2B57F6261E56831300CFD316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B57F6241E56831300CFD316 /* LaunchScreen.storyboard */; };
 		2B57F6321E56882A00CFD316 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B57F6311E56882A00CFD316 /* CircleButton.swift */; };
+		2B57F6341E579B8A00CFD316 /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2B57F6331E579B8A00CFD316 /* test.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2B57F6251E56831300CFD316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B57F6271E56831300CFD316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B57F6311E56882A00CFD316 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		2B57F6331E579B8A00CFD316 /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2B57F61B1E56831300CFD316 /* AppDelegate.swift */,
 				2B57F61F1E56831300CFD316 /* Main.storyboard */,
 				2B57F6221E56831300CFD316 /* Assets.xcassets */,
+				2B57F6331E579B8A00CFD316 /* test.m4a */,
 				2B57F6241E56831300CFD316 /* LaunchScreen.storyboard */,
 				2B57F6271E56831300CFD316 /* Info.plist */,
 			);
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B57F6341E579B8A00CFD316 /* test.m4a in Resources */,
 				2B57F6261E56831300CFD316 /* LaunchScreen.storyboard in Resources */,
 				2B57F6231E56831300CFD316 /* Assets.xcassets in Resources */,
 				2B57F6211E56831300CFD316 /* Main.storyboard in Resources */,

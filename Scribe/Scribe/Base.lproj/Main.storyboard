@@ -50,6 +50,9 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="transcribeBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qxv-qd-T5f"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3O-tJ-w3Q">
                                 <rect key="frame" x="87" y="631.5" width="201" height="27.5"/>
@@ -89,6 +92,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M3O-tJ-w3Q" secondAttribute="bottom" constant="8" id="yZl-k8-zsL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="sF2-cQ-Nle" id="Wft-lO-C9n"/>
+                        <outlet property="transcriptionTextField" destination="f6V-lQ-RpZ" id="ZN2-Tl-YMV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
