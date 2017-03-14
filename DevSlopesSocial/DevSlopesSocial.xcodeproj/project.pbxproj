@@ -15,6 +15,8 @@
 		2BA4B7101E723E5600E61EC9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4B70F1E723E5600E61EC9 /* FeedVC.swift */; };
 		2BA4B7131E730CDB00E61EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA4B7111E730CDB00E61EC9 /* Main.storyboard */; };
 		2BA4B7151E736E2C00E61EC9 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4B7141E736E2C00E61EC9 /* CircleView.swift */; };
+		2BA4B7171E737F9600E61EC9 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4B7161E737F9600E61EC9 /* PostCell.swift */; };
+		2BA4B71A1E7859E900E61EC9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4B7191E7859E900E61EC9 /* DataService.swift */; };
 		2BAEC6931E5F5B030045F58B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAEC6921E5F5B030045F58B /* AppDelegate.swift */; };
 		2BAEC6951E5F5B030045F58B /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAEC6941E5F5B030045F58B /* SignInVC.swift */; };
 		2BAEC69A1E5F5B030045F58B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAEC6991E5F5B030045F58B /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		2BA4B70F1E723E5600E61EC9 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		2BA4B7121E730CDB00E61EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BA4B7141E736E2C00E61EC9 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		2BA4B7161E737F9600E61EC9 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		2BA4B7191E7859E900E61EC9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2BAEC68F1E5F5B030045F58B /* DevSlopesSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevSlopesSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BAEC6921E5F5B030045F58B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BAEC6941E5F5B030045F58B /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -64,6 +68,14 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		2BA4B7181E7859B700E61EC9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2BA4B7191E7859E900E61EC9 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		2BAEC6861E5F5B030045F58B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +97,7 @@
 		2BAEC6911E5F5B030045F58B /* DevSlopesSocial */ = {
 			isa = PBXGroup;
 			children = (
+				2BA4B7181E7859B700E61EC9 /* Services */,
 				2BA4B7081E649EF300E61EC9 /* Util */,
 				2BAEC6A61E5F61C20045F58B /* Model */,
 				2BAEC6A81E5F61D40045F58B /* Controller */,
@@ -114,6 +127,7 @@
 				2BA4B70B1E64A33C00E61EC9 /* FancyField.swift */,
 				2BA4B70D1E64A46800E61EC9 /* FancyBtn.swift */,
 				2BA4B7141E736E2C00E61EC9 /* CircleView.swift */,
+				2BA4B7161E737F9600E61EC9 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -273,10 +287,12 @@
 				2BAEC6951E5F5B030045F58B /* SignInVC.swift in Sources */,
 				2BA4B70A1E64A12600E61EC9 /* RoundBtn.swift in Sources */,
 				2BAEC6931E5F5B030045F58B /* AppDelegate.swift in Sources */,
+				2BA4B71A1E7859E900E61EC9 /* DataService.swift in Sources */,
 				2BA4B7101E723E5600E61EC9 /* FeedVC.swift in Sources */,
 				2BA4B7051E649E6500E61EC9 /* FancyView.swift in Sources */,
 				2BA4B7071E649EEE00E61EC9 /* Constants.swift in Sources */,
 				2BA4B70E1E64A46800E61EC9 /* FancyBtn.swift in Sources */,
+				2BA4B7171E737F9600E61EC9 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
