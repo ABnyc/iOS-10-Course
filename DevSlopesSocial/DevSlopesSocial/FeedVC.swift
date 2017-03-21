@@ -12,7 +12,12 @@ import SwiftKeychainWrapper
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var captionField: FancyField!
     @IBOutlet weak var tableView: UITableView!
+    
+    var imageSelected = false
+    
+    
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     //static var imageCache: Cache<NSString, UIImage> = Cache() //adding static makes it global variable
@@ -104,6 +109,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
             print("AB: A valid image wasnt selected")
         }
@@ -116,6 +122,38 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
     }
 
+    @IBAction func postBtnTapped(_ sender: Any) {
+        
+        guard let caption = captionField.text, caption != "" else {
+            //guard statment enters here if abive conditions are not true
+            print("AB: Caption must be entered")
+            return
+            
+        }
+        
+        guard let img = addImage.image, imageSelected == true else {
+            print("AB: An image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2){
+            let imgUid = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata){ (metadata, error) in
+                if error != nil {
+                    print("AB: Unable to upload image to Firebase storage")
+                } else {
+                    print("AB: Successfully uploaded image to Firebase storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    
+                }
+            
+            }
+        }
+        
+    }
    
 
 }
